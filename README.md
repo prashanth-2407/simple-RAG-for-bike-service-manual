@@ -2,23 +2,23 @@ Bike Troubleshooting Assistant (RAG with FAISS + Ollama)
 
 📖 About the Project
 
-This project demonstrates a Retrieval-Augmented Generation (RAG) pipeline built around a bike troubleshooting manual. It takes a PDF manual as input, retrieves relevant sections using semantic search, and generates context-aware answers with an LLM (Ollama).
-
-Input: Bike manual in PDF format
-
-Output: Natural language answers to rider queries
-
-Approach:
-
-Extracts text from the manual (PyPDF2).
-
-Embeds documents using sentence-transformers.
-
-Indexes embeddings in FAISS for semantic search.
-
-Retrieves relevant chunks for a given query.
-
-Generates answers with Ollama (wizardlm2 model).
+    This project demonstrates a Retrieval-Augmented Generation (RAG) pipeline built around a bike troubleshooting manual. It takes a PDF manual as input, retrieves relevant sections using semantic search, and generates context-aware answers with an LLM (Ollama).
+    
+    Input: Bike manual in PDF format
+    
+    Output: Natural language answers to rider queries
+    
+    Approach:
+    
+    Extracts text from the manual (PyPDF2).
+    
+    Embeds documents using sentence-transformers.
+    
+    Indexes embeddings in FAISS for semantic search.
+    
+    Retrieves relevant chunks for a given query.
+    
+    Generates answers with Ollama (wizardlm2 model).
 
 ⚙️ Tech Stack
 
