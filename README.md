@@ -1,48 +1,32 @@
-Bike Troubleshooting Assistant (RAG with FAISS + Ollama)
+# 🏍️ Bike Troubleshooting Assistant (RAG with FAISS + Ollama)
 
-📖 About the Project
+## 📖 About the Project
+This project is a **Retrieval-Augmented Generation (RAG) pipeline** built around a bike troubleshooting manual.  
+It takes a PDF manual as input, retrieves relevant sections using semantic search, and generates **context-aware answers** with an LLM (Ollama).  
 
-    This project demonstrates a Retrieval-Augmented Generation (RAG) pipeline built around a bike troubleshooting manual. It takes a PDF manual as input, retrieves relevant sections using semantic search, and generates context-aware answers with an LLM (Ollama).
-    
-    Input: Bike manual in PDF format
-    
-    Output: Natural language answers to rider queries
-    
-    Approach:
-    
-    Extracts text from the manual (PyPDF2).
-    
-    Embeds documents using sentence-transformers.
-    
-    Indexes embeddings in FAISS for semantic search.
-    
-    Retrieves relevant chunks for a given query.
-    
-    Generates answers with Ollama (wizardlm2 model).
+- **Input**: Bike manual in PDF format  
+- **Output**: Natural language answers to rider queries  
+- **Pipeline Steps**:
+  1. Extract text from the manual (**PyPDF2**)  
+  2. Convert text into embeddings (**Sentence Transformers**)  
+  3. Store & query embeddings using **FAISS**  
+  4. Retrieve relevant chunks for a user query  
+  5. Generate an answer with **Ollama** (`wizardlm2` model)  
 
-⚙️ Tech Stack
+---
 
-Python
+## ⚙️ Tech Stack
+- **Python**
+- **PyPDF2** → PDF text extraction  
+- **Sentence-Transformers** → embedding generation  
+- **FAISS** → semantic search  
+- **Ollama** → large language model inference  
 
-PyPDF2 (text extraction from PDF)
+---
 
-Sentence-Transformers (embedding generation)
-
-FAISS (semantic search / nearest neighbor retrieval)
-
-Ollama (LLM inference)
-
-🚴 Use Case Example
-Query: "give some interesting facts about the bike?"
-
-
-✅ Pipeline retrieves relevant sections from the manual
-✅ Ollama generates a natural response grounded in the context
-
-📌 Why This Project?
-
-Showcases practical application of RAG in a real-world domain (bike troubleshooting).
-
-Demonstrates hybrid reasoning: knowledge from documents + model priors.
-
-Scalable to other manuals (cars, electronics, appliances).
+## 🚴 Example Usage
+```python
+# Example query
+query = "give some interesting facts about the bike?"
+answer = generate_answer(query)
+print("Answer:", answer)
